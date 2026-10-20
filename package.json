@@ -1,0 +1,33 @@
+{
+  "name": "brightline-api-integration-health",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local API integration health monitoring for BRIGHTLINE HR",
+  "main": "server.js",
+  "scripts": {
+    "dev": "concurrently -k \"node --watch server.js\" \"npm run dev --prefix frontend\"",
+    "start": "node server.js",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "db:init": "node database/seed.js",
+    "import-logs": "node scripts/importLogs.js",
+    "simulate-logs": "node scripts/simulateLogs.js",
+    "build": "npm run build --prefix frontend"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pino": "^9.6.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^5.0.5",
+    "concurrently": "^9.1.2",
+    "supertest": "^7.0.0",
+    "vitest": "^5.0.5"
+  }
+}

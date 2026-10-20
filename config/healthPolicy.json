@@ -1,0 +1,19 @@
+{
+  "windowMinutes": 15,
+  "evaluationIntervalSeconds": 60,
+  "staleAfterSeconds": 300,
+  "errorRateWarningPercent": 2,
+  "errorRateCriticalPercent": 5,
+  "p95WarningMs": 1000,
+  "p95CriticalMs": 2000,
+  "minimumRequestCount": 20,
+  "criticalPersistenceEvaluations": 2,
+  "recoveryEvaluations": 2,
+  "integrations": {
+    "payroll": { "critical": true },
+    "e-signature": { "critical": true },
+    "ats": { "critical": false },
+    "directory-sync": { "critical": true },
+    "notifications": { "critical": false }
+  }
+}
